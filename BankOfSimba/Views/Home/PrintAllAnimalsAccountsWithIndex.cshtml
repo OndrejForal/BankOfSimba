@@ -1,0 +1,93 @@
+﻿
+@using BankOfSimba.Models
+@model List<BankAccount>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bank of Simba</title>
+        <link rel="stylesheet" type="text/css" href="~/StyleSheet.css" />
+    </head>
+    <body>
+       
+           
+            
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                var animal = Model[i];
+        <table>
+
+            
+
+                @if (animal.King)
+                {
+
+                    <tr>
+                        <td>Account Index:</td>
+                        <td>@i</td>
+                    </tr>
+                    <tr>
+                        <td>Animal name:</td>
+                        <td>@animal.Name</td>
+                    </tr>
+                    <tr>
+                        <td>Animal balance:</td>
+                        <td>@animal.Balance @animal.Currency</td>
+                    </tr>
+                    <tr>
+                        <td>Animal Species:</td>
+                        <td>@animal.AnimalType</td>
+                    </tr>
+
+                    <tr>
+                        <td>Is animal king ?:</td>
+                        <td><p>Is King</p></td>
+                    </tr>
+
+                 }
+
+            
+
+            
+
+            <tr>
+                <td>Account Index:</td>
+                <td>@i</td>
+            </tr>
+            <tr>
+                <td>Animal name:</td>
+                <td>@animal.Name</td>
+            </tr>
+            <tr>
+                <td>Animal balance:</td>
+                <td>@animal.Balance @animal.Currency</td>
+            </tr>
+            <tr>
+                <td>Animal Species:</td>
+                <td>@animal.AnimalType</td>
+            </tr>
+
+
+
+            <tr>
+                <td>Is animal king ?:</td>
+                <td>No Chance!!</td>
+            </tr>
+            }
+
+
+        </table>
+            
+            
+            
+            
+            }
+
+
+        
+    
+    
+    
+    
+    
+    
+    </body>
+    </html>

@@ -1,0 +1,26 @@
+﻿body {
+    flex-direction: column;
+    margin: 10px auto;
+}
+
+.table{
+flex-direction:column;
+margin:10px auto;
+
+}
+.king{
+    color : gold ;
+
+}
+.noob{
+    color: brown;
+}
+tr{
+    
+    border:1px solid black;
+    border-radius:5px;
+
+}
+form {
+    margin: 10px auto;
+}

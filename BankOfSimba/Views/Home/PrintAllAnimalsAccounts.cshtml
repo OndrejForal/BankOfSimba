@@ -1,0 +1,52 @@
+﻿
+@using BankOfSimba.Models
+@model List<BankAccount>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bank Of Simba</title>
+    <link rel="stylesheet" type="text/css" href="~/StyleSheet.css" />
+</head>
+<body>
+    <table class="table">
+
+        <tr class="table-header">
+            <td>Name</td>
+            <td>Balance</td>
+            <td>Animal Species</td>
+            <td>Is King?:</td>
+            <td>Is Good Boy?:</td>
+
+
+        </tr>
+
+
+
+        @foreach (var animal in Model)
+        {
+            var roleClass = animal.King ? "king" : "noob";
+
+
+            <tr class="@roleClass">
+                <td>@animal.Name</td>
+                <td>@animal.Balance @animal.Currency </td>
+                <td>@animal.AnimalType</td>
+                <td>@(animal.King ? "He Is King" : "No Way")</td>
+                <td>@(animal.GoodGuy ? "Good Boy" : "Ugly One")</td>
+
+            </tr>
+
+        }
+
+    </table>
+    @using (Html.BeginForm("RaiseBalance", "Home", FormMethod.Post))
+    {
+        <input type="submit" value="Raise Balance" />
+    }
+
+
+    </body>
+</html>
+
+
